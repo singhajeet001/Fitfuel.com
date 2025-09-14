@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Custom Meal Boxes — NutriPulse</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body{font-family:Inter,system-ui;}
+    .hero {background:linear-gradient(135deg,#f0f8ff,#e6f0ff); padding:80px 12px; text-align:center; color:#073b7e;}
+    .box-preview{min-height:220px;border-radius:14px;border:1px dashed rgba(7,59,126,.12); padding:18px;}
+    .item-row{transition: transform .28s, box-shadow .28s;}
+    .item-row:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(7,59,126,.06);}
+    .nutri-pill{background:#f8fbff;border-radius:999px;padding:6px 10px;font-weight:600;color:#05306f;}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">NutriPulse</a>
+      <div>
+        <a href="instant-energy.html" class="me-2">Instant Energy</a>
+        <a href="trainer-approved.html" class="me-2">Trainers</a>
+        <a href="delivery-promise.html">Delivery</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1 data-aos="zoom-in">Build Your Custom Meal Box</h1>
+      <p class="lead mt-2" data-aos="fade-up">Select items, set portions, and preview the nutrition totals in real-time.</p>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <div class="row g-4">
+      <!-- Builder -->
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="card p-3">
+          <h5>Choose items</h5>
+          <p class="small text-muted mb-3">Tap items to add them to your box. Adjust portions after adding.</p>
+
+          <!-- Items list -->
+          <div id="itemsList" class="row g-3">
+            <!-- Each item includes dataset for nutrition per serving -->
+            <div class="col-12 item-row">
+              <div class="d-flex justify-content-between align-items-center p-3 border rounded-3">
+                <div>
+                  <strong>Sprouted Moong</strong>
+                  <div class="small text-muted">105 kcal — 7g P / 19g C / 0.5g F</div>
+                </div>
+                <div>
+                  <button class="btn btn-outline-success btn-sm add-item" data-name="Sprouted Moong" data-cal="105" data-pro="7" data-carbs="19" data-fat="0.5">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 item-row">
+              <div class="d-flex justify-content-between align-items-center p-3 border rounded-3">
+                <div>
+                  <strong>Green Chana (Boiled)</strong>
+                  <div class="small text-muted">145 kcal — 8g P / 27g C / 2g F</div>
+                </div>
+                <div>
+                  <button class="btn btn-outline-success btn-sm add-item" data-name="Green Chana" data-cal="145" data-pro="8" data-carbs="27" data-fat="2">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 item-row">
+              <div class="d-flex justify-content-between align-items-center p-3 border rounded-3">
+                <div>
+                  <strong>Boiled Broccoli</strong>
+                  <div class="small text-muted">45 kcal — 3g P / 7g C / 0.5g F</div>
+                </div>
+                <div>
+                  <button class="btn btn-outline-success btn-sm add-item" data-name="Boiled Broccoli" data-cal="45" data-pro="3" data-carbs="7" data-fat="0.5">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 item-row">
+              <div class="d-flex justify-content-between align-items-center p-3 border rounded-3">
+                <div>
+                  <strong>Boiled Sweet Potato</strong>
+                  <div class="small text-muted">90 kcal — 2g P / 21g C / 0.1g F</div>
+                </div>
+                <div>
+                  <button class="btn btn-outline-success btn-sm add-item" data-name="Boiled Sweet Potato" data-cal="90" data-pro="2" data-carbs="21" data-fat="0.1">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 item-row">
+              <div class="d-flex justify-content-between align-items-center p-3 border rounded-3">
+                <div>
+                  <strong>Protein Power Salad</strong>
+                  <div class="small text-muted">220 kcal — 15g P / 18g C / 6g F</div>
+                </div>
+                <div>
+                  <button class="btn btn-outline-success btn-sm add-item" data-name="Protein Salad" data-cal="220" data-pro="15" data-carbs="18" data-fat="6">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 item-row">
+              <div class="d-flex justify-content-between align-items-center p-3 border rounded-3">
+                <div>
+                  <strong>Seasonal Fruit Salad</strong>
+                  <div class="small text-muted">150 kcal — 2g P / 35g C / 0.3g F</div>
+                </div>
+                <div>
+                  <button class="btn btn-outline-success btn-sm add-item" data-name="Fruit Salad" data-cal="150" data-pro="2" data-carbs="35" data-fat="0.3">Add</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Selected items list -->
+        <div class="card p-3 mt-4">
+          <h6>Your Box</h6>
+          <div id="boxList" class="mt-3"></div>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div><small class="text-muted">Totals</small></div>
+            <div>
+              <span class="nutri-pill" id="totals">0 kcal · 0g P · 0g C · 0g F</span>
+            </div>
+          </div>
+
+          <div class="mt-3 text-end">
+            <button id="clearBox" class="btn btn-outline-secondary btn-sm">Clear</button>
+            <button id="checkout" class="btn btn-success ms-2">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview / Tips -->
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="box-preview d-flex flex-column justify-content-between">
+          <div>
+            <h5>Box Preview</h5>
+            <p class="small text-muted">Organize your selections — see nutrition update live.</p>
+            <div id="previewItems" class="mt-3"></div>
+          </div>
+
+          <div class="mt-3">
+            <h6>Smart Suggestions</h6>
+            <ul class="small text-muted">
+              <li>For muscle gain: aim 25–35g protein per meal.</li>
+              <li>For fat loss: keep overall calories slightly below maintenance.</li>
+            </ul>
+            <a class="btn btn-primary btn-sm mt-2" href="#totals">Optimize box</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center py-4 bg-white">
+    <small class="text-muted">NutriPulse — build your optimal box</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true});
+    // Simple meal box builder logic
+    const box = [];
+    const boxList = document.getElementById('boxList');
+    const preview = document.getElementById('previewItems');
+    const totalsEl = document.getElementById('totals');
+
+    function renderBox(){
+      boxList.innerHTML = '';
+      preview.innerHTML = '';
+      let totals = {cal:0,pro:0,carbs:0,fat:0};
+      box.forEach((it, idx) => {
+        const row = document.createElement('div');
+        row.className = 'd-flex align-items-center justify-content-between mb-2';
+        row.innerHTML = `
+          <div>
+            <strong>${it.name}</strong>
+            <div class="small text-muted">${it.cal} kcal · ${it.pro}g P</div>
+          </div>
+          <div class="d-flex gap-2 align-items-center">
+            <input type="number" min="1" value="${it.qty}" data-idx="${idx}" class="form-control form-control-sm qty" style="width:80px;">
+            <button class="btn btn-sm btn-outline-danger rem" data-idx="${idx}">&times;</button>
+          </div>
+        `;
+        boxList.appendChild(row);
+
+        // preview card
+        const p = document.createElement('div');
+        p.className = 'small text-muted mb-2';
+        p.textContent = `${it.qty} × ${it.name} — ${it.cal * it.qty} kcal`;
+        preview.appendChild(p);
+
+        totals.cal += it.cal * it.qty;
+        totals.pro += it.pro * it.qty;
+        totals.carbs += it.carbs * it.qty;
+        totals.fat += it.fat * it.qty;
+      });
+
+      totalsEl.textContent = `${Math.round(totals.cal)} kcal · ${Math.round(totals.pro)}g P · ${Math.round(totals.carbs)}g C · ${Math.round(totals.fat)}g F`;
+
+      // attach listeners
+      document.querySelectorAll('.rem').forEach(btn => btn.onclick = e => {
+        const idx = +e.currentTarget.dataset.idx;
+        box.splice(idx,1); renderBox();
+      });
+
+      document.querySelectorAll('.qty').forEach(inp => inp.onchange = e => {
+        const idx = +e.currentTarget.dataset.idx;
+        let v = Math.max(1, Number(e.currentTarget.value));
+        box[idx].qty = v; renderBox();
+      });
+    }
+
+    document.querySelectorAll('.add-item').forEach(btn => {
+      btn.onclick = () => {
+        const item = {
+          name: btn.dataset.name,
+          cal: Number(btn.dataset.cal),
+          pro: Number(btn.dataset.pro),
+          carbs: Number(btn.dataset.carbs),
+          fat: Number(btn.dataset.fat),
+          qty: 1
+        };
+        // if exists, increment
+        const idx = box.findIndex(b => b.name === item.name);
+        if(idx !== -1){ box[idx].qty++; } else box.push(item);
+        renderBox();
+      };
+    });
+
+    document.getElementById('clearBox').onclick = () => { box.length = 0; renderBox(); };
+    document.getElementById('checkout').onclick = () => {
+      if(!box.length) return alert('Add items to your box first.');
+      // simulate add to cart
+      alert('Box added to cart — ' + totalsEl.textContent);
+    };
+
+    // initial
+    renderBox();
+  </script>
+</body>
+</html>

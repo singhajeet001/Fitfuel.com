@@ -1,0 +1,10 @@
+.special-btn {
+    border-radius: 25px;
+    padding: 6px 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .special-btn:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }

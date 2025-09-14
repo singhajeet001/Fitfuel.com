@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>6 AM Delivery Promise — NutriPulse</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body{font-family:Inter,system-ui;}
+    .hero{background: linear-gradient(135deg,#fff7f0,#fff0e6); padding:72px 12px; text-align:center; color:#6b3a12;}
+    .timeline {display:flex; gap:18px; justify-content:center; align-items:flex-start; flex-wrap:wrap; margin-top:24px;}
+    .step{width:220px; padding:18px; border-radius:12px; background:white; box-shadow:0 8px 24px rgba(0,0,0,.05); transform:translateY(20px); opacity:0; transition:all .7s cubic-bezier(.2,.9,.3,1);}
+    .step.visible{transform:none;opacity:1;}
+    .truck {font-size:28px;}
+    footer{padding:40px 0;background:#fff7f0;}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">NutriPulse</a>
+      <div>
+        <a href="custom-meal-boxes.html" class="me-2">Custom Boxes</a>
+        <a href="trainer-approved.html" class="me-2">Trainers</a>
+        <a href="instant-energy.html">Instant Energy</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1 data-aos="zoom-in">🚚 6 AM Delivery Promise</h1>
+      <p class="lead mt-2" data-aos="fade-up">Fresh meals delivered the moment you plan your morning — hot, fresh & on time.</p>
+      <a class="btn btn-warning mt-3" href="#signup">Get Early Delivery</a>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <h4 class="text-center mb-4">How we deliver by 6 AM</h4>
+
+    <div id="timeline" class="timeline">
+      <div class="step text-center" data-time="04:00" id="s1">
+        <div class="mb-2"><i class="bi bi-clipboard2-check fs-2 text-success"></i></div>
+        <h6>Order Cutoff</h6>
+        <small class="text-muted">Place order by 9 PM to lock in next-day 6 AM delivery.</small>
+      </div>
+
+      <div class="step text-center" data-time="00:00" id="s2">
+        <div class="mb-2"><i class="bi bi-basket2 fs-2 text-primary"></i></div>
+        <h6>Fresh Prep Starts</h6>
+        <small class="text-muted">Our kitchens prepare your box overnight with strict freshness checks.</small>
+      </div>
+
+      <div class="step text-center" data-time="03:30" id="s3">
+        <div class="mb-2"><i class="bi bi-box-seam fs-2 text-warning"></i></div>
+        <h6>Quality Check & Pack</h6>
+        <small class="text-muted">Sealing, temperature checks, and insulated packing.</small>
+      </div>
+
+      <div class="step text-center" data-time="05:15" id="s4">
+        <div class="mb-2"><i class="bi bi-truck fs-2 text-danger"></i></div>
+        <h6>Dispatch for 6 AM</h6>
+        <small class="text-muted">Local couriers follow optimized routes to meet the promise.</small>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <p class="small text-muted">We monitor delivery temperatures and confirm each drop — if we miss 6 AM, the meal is on us.</p>
+      <div class="d-flex justify-content-center gap-2">
+        <button id="checkETA" class="btn btn-outline-primary">Check ETA</button>
+        <a id="signup" class="btn btn-warning" href="#signupform">Sign up for Early Delivery</a>
+      </div>
+    </div>
+
+    <!-- signup mock -->
+    <div id="signupform" class="mt-5 mx-auto" style="max-width:720px">
+      <div class="card p-3">
+        <h5>Get early delivery notifications</h5>
+        <p class="small text-muted">Enter mobile or email — we'll reserve your delivery slot and notify when on route.</p>
+        <form id="signupFrm">
+          <div class="row g-2">
+            <div class="col-md-6">
+              <input class="form-control" id="name" placeholder="Full name" required>
+            </div>
+            <div class="col-md-6">
+              <input class="form-control" id="contact" placeholder="Phone or email" required>
+            </div>
+          </div>
+          <div class="mt-3 text-end">
+            <button class="btn btn-success">Reserve 6 AM Slot</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-center">
+    <small class="text-muted">NutriPulse — On-time or your meal is free</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true});
+
+    // reveal timeline steps with delay
+    const steps = document.querySelectorAll('.step');
+    steps.forEach((s,i) => {
+      setTimeout(()=> s.classList.add('visible'), 220 + i*180);
+    });
+
+    document.getElementById('checkETA').onclick = () => {
+      alert('ETA check — couriers typically deliver between 5:45–6:10 AM for your zone.');
+    };
+
+    // simple signup form stub
+    document.getElementById('signupFrm').onsubmit = (e) => {
+      e.preventDefault();
+      alert('Thanks! We reserved your 6 AM delivery slot and will send confirmation.');
+      e.target.reset();
+    };
+  </script>
+</body>
+</html>

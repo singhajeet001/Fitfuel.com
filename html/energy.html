@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Instant Energy — NutriPulse</title>
+
+  <!-- Bootstrap, AOS, Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#0f5132; /* deep green */
+      --accent-2:#7ee7c7;
+    }
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    .navbar-brand{font-weight:700;letter-spacing:.4px;}
+    .hero{
+      background: linear-gradient(135deg,#e8fff7 0%, #b2f5ea 100%);
+      color:var(--accent);
+      padding:96px 12px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero .pulse {
+      font-weight:800;
+      font-size:2.25rem;
+      display:inline-block;
+      animation: pulse 2.2s infinite;
+    }
+    @keyframes pulse{
+      0%{transform:scale(1);opacity:1}
+      50%{transform:scale(1.06);opacity:.92}
+      100%{transform:scale(1);opacity:1}
+    }
+
+    .benefit-card{
+      border-radius:14px;
+      transition:transform .45s, box-shadow .45s;
+    }
+    .benefit-card:hover{ transform:translateY(-8px); box-shadow:0 18px 40px rgba(10,30,20,.08); }
+
+    .steps {
+      display:flex; gap:18px; justify-content:center; align-items:center; flex-wrap:wrap;
+    }
+    .icon-circle{
+      width:72px;height:72px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+      background:rgba(255,255,255,.55);backdrop-filter: blur(4px); border:1px solid rgba(0,0,0,.03);
+    }
+
+    footer{padding:48px 0;background:#f8faf8;color:#35523b;}
+    .brand-accent{color:var(--accent); font-weight:700;}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">NutriPulse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="instant-energy.html">Instant Energy</a></li>
+          <li class="nav-item"><a class="nav-link" href="trainer-approved.html">Trainer Approved</a></li>
+          <li class="nav-item"><a class="nav-link" href="custom-meal-boxes.html">Custom Boxes</a></li>
+          <li class="nav-item"><a class="nav-link" href="delivery-promise.html">6 AM Delivery</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <h1 data-aos="zoom-in">⚡ <span class="pulse">Instant Energy</span> Meals</h1>
+      <p class="lead mt-3" data-aos="fade-up" data-aos-delay="120">Clean, natural fuel — perfect for pre-workout, busy mornings, or a midday performance boost.</p>
+
+      <div class="d-flex justify-content-center gap-3 mt-4 steps" data-aos="fade-up" data-aos-delay="240">
+        <div class="text-center">
+          <div class="icon-circle"><i class="bi bi-lightning-charge fs-3 text-success"></i></div>
+          <small class="d-block mt-2">Clean Carbs</small>
+        </div>
+        <div class="text-center">
+          <div class="icon-circle"><i class="bi bi-droplet fs-3 text-info"></i></div>
+          <small class="d-block mt-2">Hydration</small>
+        </div>
+        <div class="text-center">
+          <div class="icon-circle"><i class="bi bi-shield-check fs-3 text-warning"></i></div>
+          <small class="d-block mt-2">Clinically Balanced</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BENEFITS GRID -->
+  <section class="py-5 container">
+    <h2 class="mb-4 text-center">How Instant Energy works</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card p-4 benefit-card h-100 border-0 shadow-sm">
+          <div class="d-flex align-items-start gap-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-3">
+              <i class="bi bi-clock-fill fs-2 text-success"></i>
+            </div>
+            <div>
+              <h5>Fast-acting Fuel</h5>
+              <p class="mb-0 small text-muted">Ingredients chosen for quick digestion and steady glucose delivery to avoid peaks & crashes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
+        <div class="card p-4 benefit-card h-100 border-0 shadow-sm">
+          <div class="d-flex align-items-start gap-3">
+            <div class="bg-info bg-opacity-10 p-3 rounded-3">
+              <i class="bi bi-bolt fs-2 text-info"></i>
+            </div>
+            <div>
+              <h5>Hydration + Electrolytes</h5>
+              <p class="mb-0 small text-muted">Electrolyte-rich ingredients to help performance & recovery during intense sessions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="240">
+        <div class="card p-4 benefit-card h-100 border-0 shadow-sm">
+          <div class="d-flex align-items-start gap-3">
+            <div class="bg-warning bg-opacity-10 p-3 rounded-3">
+              <i class="bi bi-heart-pulse fs-2 text-warning"></i>
+            </div>
+            <div>
+              <h5>Muscle-Saving Protein</h5>
+              <p class="mb-0 small text-muted">Balanced protein to protect lean mass and improve training capacity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick product highlights -->
+    <div class="row g-3 mt-4">
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="card p-3 h-100 border-success border-1">
+          <h6 class="mb-2">Featured: Boiled Sweet Potato</h6>
+          <p class="small text-muted mb-1">Complex carbs, potassium for muscle function, low GI.</p>
+          <div><strong>90 kcal</strong> · <small class="text-muted">per 200g</small></div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card p-3 h-100 border-info border-1">
+          <h6 class="mb-2">Hydration Mix</h6>
+          <p class="small text-muted mb-1">Coconut water + lemon & pinch of sea salt for electrolytes.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="card p-3 h-100 border-warning border-1">
+          <h6 class="mb-2">Quick Tips</h6>
+          <ul class="small mb-0">
+            <li>Eat 30–45 minutes before workout for optimal fuel.</li>
+            <li>Choose 200–300 kcal portion if training >60 min.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-5 text-center bg-light">
+    <div class="container" data-aos="zoom-in">
+      <h3>Ready to power up your day?</h3>
+      <p class="small text-muted">Explore Instant Energy products curated by our nutrition team.</p>
+      <a class="btn btn-success btn-lg" href="index.html#products">Shop Instant Energy</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1 brand-accent">NutriPulse — Clean, Trusted Nutrition</p>
+      <small class="text-muted">© <span id="yr"></span> NutriPulse</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true});
+    document.getElementById('yr').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>

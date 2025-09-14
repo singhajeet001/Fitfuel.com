@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NutriPulse — Eat Clean. Train Hard.</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex gap-2 align-items-center" href="#">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" fill="url(#g)"/><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#24b573"/><stop offset="1" stop-color="#66d3a1"/></linearGradient></defs></svg>
+        <span style="font-weight:700">NutriPulse</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#calculator">Calculator</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teller">Diet Teller</a></li>
+          <li class="nav-item"><a class="nav-link" href="#plan">Diet Plan</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="hero-card reveal">
+            <h1 class="hero-title">Fuel your workouts with real food — <span style="background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#fff; padding:.2rem .5rem; border-radius:8px">NutriPulse</span></h1>
+            <p class="hero-sub">Fresh sprouts, chana, nuts, seasonal fruits & pure honey — packed daily and delivered before your early session.</p>
+            <div class="mt-3 d-flex gap-2">
+              <button class="cta-primary btn" id="openOrder">Build My Box</button>
+              <button class="cta-ghost btn" id="openCalc">Macro Calculator</button>
+            </div>
+            <div class="mt-3 small text-muted">Order by 11pm for next-day 6:00 AM delivery • Trainer-approved items</div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center reveal">
+          <img src="https://www.kuchpakrahahai.in/wp-content/uploads/2015/06/Moong-sprouts-salad.jpg" alt="Fresh food" class="img-fluid rounded" style="filter:drop-shadow(0 12px 24px rgba(6,190,182,0.08));">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRODUCTS -->
+<section id="products" class="py-5 container">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Featured Products</h2>
+    <small class="text-muted">Tap add to include in your box</small>
+  </div>
+
+  <div class="row">
+    <!-- Product 1 -->
+    <div class="col-md-4 mb-4 reveal">
+      <div class="card product-card border-success shadow-sm">
+        <img class="card-img-top"
+          src="https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/BigBead/bean_sprouts_bigbead/1800x1200_bean_sprouts_bigbead.jpg?resize=750px:*&output-quality=75"
+          alt="Sprouted Moong">
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-between align-items-center">
+            Sprouted Moong <span class="badge bg-success text-light">Lean Muscle Boost</span>
+          </h5>
+          <p class="small text-muted mb-2">🌱 Low in fat, high in protein — perfect for muscle growth and digestive health.</p>
+          <ul class="small mb-2 ps-3">
+            <li>💪 7g protein per 100g</li>
+            <li>🔥 Boosts metabolism & supports fat loss</li>
+            <li>🥗 Ideal for salads or light meals</li>
+            <li>🧪 Detoxifies and balances blood sugar</li>
+          </ul>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div><strong>₹40</strong> / 200g</div>
+            <div>
+              <button class="btn btn-outline-secondary btn-sm"
+                onclick="showDetails('Sprouted Moong','Excellent source of lean protein and fiber. Supports clean muscle gain and digestion.')">Details</button>
+              <button class="btn btn-success btn-sm ms-2 btn-add" data-name="Sprouted Moong" data-cal="105" data-pro="7"
+                data-carbs="19" data-fat="0.5">Add</button>
+            </div>
+          </div>
+          <div class="text-muted small">🕒 Best time: Early morning or post-workout</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col-md-4 mb-4 reveal">
+      <div class="card product-card border-success shadow-sm">
+        <img class="card-img-top"
+          src="https://c.ndtvimg.com/2019-09/3uipedbg_chana-chaat_625x300_17_September_19.JPG?im=FaceCrop,algorithm=dnn,width=1200,height=886"
+          alt="Green Chana">
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-between align-items-center">
+            Green Chana (Boiled) <span class="badge bg-success text-light">Clean Plant Protein</span>
+          </h5>
+          <p class="small text-muted mb-2">🌿 Rich in fiber and protein — great for clean muscle gain and long-lasting energy.</p>
+          <ul class="small mb-2 ps-3">
+            <li>💪 8g protein per 100g</li>
+            <li>🥣 Helps with muscle recovery and satiety</li>
+            <li>🧂 Naturally seasoned — great with lemon & salt</li>
+            <li>🌱 Supports clean bulking & vegetarian diet plans</li>
+          </ul>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div><strong>₹60</strong> / 250g</div>
+            <div>
+              <button class="btn btn-outline-secondary btn-sm"
+                onclick="showDetails('Green Chana','Excellent vegetarian protein source. Great for clean bulking and post-workout recovery.')">Details</button>
+              <button class="btn btn-success btn-sm ms-2 btn-add" data-name="Green Chana" data-cal="145" data-pro="8"
+                data-carbs="27" data-fat="2">Add</button>
+            </div>
+          </div>
+          <div class="text-muted small">🕒 Best time: Mid-morning or post-workout</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col-md-4 mb-4 reveal">
+      <div class="card product-card border-warning shadow-sm">
+        <img class="card-img-top"
+          src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_1500,ar_3:2/k%2FEdit%2F2022-11-Steamed-Broccoli%2Fsteamed-broccoli-2"
+          alt="Boiled Broccoli">
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-between align-items-center">
+            Boiled Broccoli <span class="badge bg-warning text-dark">Fat Loss Friendly</span>
+          </h5>
+          <p class="small text-muted mb-2">🥦 High-fiber and low-calorie — ideal for fat burning and detox support.</p>
+          <ul class="small mb-2 ps-3">
+            <li>💚 Full of fiber, Vitamin C & K</li>
+            <li>🔥 Supports fat loss and clean digestion</li>
+            <li>🧠 Improves recovery with antioxidants</li>
+            <li>🍽️ Great with olive oil or lemon dressing</li>
+          </ul>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div><strong>₹50</strong> / 150g</div>
+            <div>
+              <button class="btn btn-outline-secondary btn-sm"
+                onclick="showDetails('Boiled Broccoli','Fat-loss friendly and full of fiber. Helps recovery, digestion, and muscle tone.')">Details</button>
+              <button class="btn btn-success btn-sm ms-2 btn-add" data-name="Boiled Broccoli" data-cal="45" data-pro="3"
+                data-carbs="7" data-fat="0.5">Add</button>
+            </div>
+          </div>
+          <div class="text-muted small">🕒 Best time: Lunch or light dinner</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="col-md-4 mb-4 reveal">
+      <div class="card product-card border-danger shadow-sm">
+        <img class="card-img-top"
+          src="https://www.realsimple.com/thmb/uwREVcE9zmfgxYOq4rZEXH-_RBY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-boil-sweet-potatoes-GettyImages-900247892-badeb9de2c024d63a02d369d96d236e5.jpg"
+          alt="Boiled Sweet Potato">
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-between align-items-center">
+            Boiled Sweet Potato <span class="badge bg-danger text-light">Pre-Workout Fuel</span>
+          </h5>
+          <p class="small text-muted mb-2">🍠 Complex carbs and potassium — long-lasting energy and muscle support.</p>
+          <ul class="small mb-2 ps-3">
+            <li>⚡ Excellent pre-workout energy source</li>
+            <li>🥔 Rich in fiber and complex carbs</li>
+            <li>💪 Helps in muscle contraction and repair</li>
+            <li>🧂 Tastes great with lemon and black salt</li>
+          </ul>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div><strong>₹30</strong> / 200g</div>
+            <div>
+              <button class="btn btn-outline-secondary btn-sm"
+                onclick="showDetails('Boiled Sweet Potato','Clean carb source for energy, endurance, and muscle function. Ideal before gym.')">Details</button>
+              <button class="btn btn-success btn-sm ms-2 btn-add" data-name="Boiled Sweet Potato" data-cal="90"
+                data-pro="2" data-carbs="21" data-fat="0.1">Add</button>
+            </div>
+          </div>
+          <div class="text-muted small">🕒 Best time: Pre-workout or afternoon snack</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="col-md-4 mb-4 reveal">
+      <div class="card product-card border-primary shadow-sm">
+        <img class="card-img-top"
+          src="https://chbmkrtsaa.cloudimg.io/_cp_/Deluxe-Turkey-Burger-Salad-e1652309462336.jpeg"
+          alt="Protein Salad">
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-between align-items-center">
+            Protein Power Salad <span class="badge bg-primary text-light">Best Seller</span>
+          </h5>
+          <p class="small text-muted mb-2">🥗 Loaded with sprouts, veggies, paneer, and seeds — perfect post-workout fuel.</p>
+          <ul class="small mb-2 ps-3">
+            <li>💪 15g+ protein per serving</li>
+            <li>🥬 Includes lettuce, moong sprouts, cucumber, tomatoes</li>
+            <li>🧀 With paneer or boiled egg option</li>
+            <li>🌿 Olive oil + lemon dressing (no mayo!)</li>
+          </ul>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div><strong>₹120</strong> / 350g</div>
+            <div>
+              <button class="btn btn-outline-secondary btn-sm"
+                onclick="showDetails('Protein Salad','High-protein, low-fat salad with sprouts, paneer, and veggies. Excellent for muscle recovery.')">Details</button>
+              <button class="btn btn-success btn-sm ms-2 btn-add" data-name="Protein Salad" data-cal="220" data-pro="15"
+                data-carbs="18" data-fat="6">Add</button>
+            </div>
+          </div>
+          <div class="text-muted small">🕒 Best time: Lunch or post-workout dinner</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="col-md-4 mb-4 reveal">
+      <div class="card product-card border-info shadow-sm">
+        <img class="card-img-top"
+          src="https://lilluna.com/wp-content/uploads/2024/12/fall-fruit-salad-resize-13.jpg"
+          alt="Seasonal Fruit Salad">
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-between align-items-center">
+            Seasonal Fruit Salad <span class="badge bg-info text-dark">Natural Multivitamin</span>
+          </h5>
+          <p class="small text-muted mb-2">🍎 Fresh-cut fruits for natural energy, hydration, and immune support.</p>
+          <ul class="small mb-2 ps-3">
+            <li>🍌 Includes banana, papaya, apple, pomegranate, and berries*</li>
+            <li>💧 Rich in antioxidants and water content</li>
+            <li>⚡ Boosts recovery and fights fatigue</li>
+            <li>🍋 Optional lemon-mint dressing (no sugar added)</li>
+          </ul>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div><strong>₹90</strong> / 300g</div>
+            <div>
+              <button class="btn btn-outline-secondary btn-sm"
+                onclick="showDetails('Seasonal Fruit Salad','Packed with vitamins, minerals, and natural sugars. Perfect post-workout snack or light meal.')">Details</button>
+              <button class="btn btn-success btn-sm ms-2 btn-add" data-name="Fruit Salad" data-cal="150" data-pro="2"
+                data-carbs="35" data-fat="0.3">Add</button>
+            </div>
+          </div>
+          <div class="text-muted small">🕒 Best time: Post-workout or mid-morning snack</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Meal Box Preview -->
+    <div class="row mt-4">
+      <div class="col-lg-8">
+        <div class="box-card">
+          <h5>Your Meal Box Preview</h5>
+          <div id="boxList" class="mb-2 small text-muted">No items yet. Click Add on products to assemble a box.</div>
+          <div class="d-flex align-items-center gap-3">
+            <div style="flex:1">
+              <div class="cal-progress"><div class="bar" id="calBar" style="width:0%"></div></div>
+              <small class="text-muted">Calories (approx): <span id="boxCal">0</span> kcal</small>
+            </div>
+            <div style="width:220px">
+              <select id="subType" class="form-select form-select-sm">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </div>
+            <div><button class="btn btn-primary btn-sm" onclick="checkout()">Subscribe</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="box-card text-center">
+          <h6>Quick Actions</h6>
+          <button class="btn btn-outline-success mt-2 w-100" onclick="randomBox()">Surprise Me</button>
+          <button class="btn btn-outline-secondary mt-2 w-100" onclick="clearBox()">Clear Box</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / Interactive icons with special buttons -->
+<section id="features" class="py-5" style="transition:background .8s ease;">
+  <div class="container">
+    <h2 class="mb-4 text-center fw-bold">What makes NutriPulse unique</h2>
+    <div class="row g-4">
+      
+      <!-- Feature 1 -->
+      <div class="col-md-3">
+        <div class="feature text-center reveal p-4 rounded shadow-sm"
+             data-bg="linear-gradient(90deg,#e8fff7,#e6fff6)">
+          <i class="bi bi-lightning-charge fs-1 text-success"></i>
+          <p class="mt-2 fw-semibold text-dark">Instant Energy</p>
+          <a href="html/energy.html" class="btn btn-outline-success mt-2 special-btn">
+            Explore →
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-md-3">
+        <div class="feature text-center reveal p-4 rounded shadow-sm"
+             data-bg="linear-gradient(90deg,#fff6e8,#fff3e0)">
+          <i class="bi bi-heart-pulse fs-1 text-danger"></i>
+          <p class="mt-2 fw-semibold text-dark">Trainer Approved</p>
+          <a href="html/trainer.html" class="btn btn-outline-danger mt-2 special-btn">
+            Explore →
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-md-3">
+        <div class="feature text-center reveal p-4 rounded shadow-sm"
+             data-bg="linear-gradient(90deg,#f0f8ff,#e6f0ff)">
+          <i class="bi bi-box-seam fs-1 text-primary"></i>
+          <p class="mt-2 fw-semibold text-dark">Custom Meal Boxes</p>
+          <a href="html/meal.html" class="btn btn-outline-primary mt-2 special-btn">
+            Explore →
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-md-3">
+        <div class="feature text-center reveal p-4 rounded shadow-sm"
+             data-bg="linear-gradient(90deg,#fff7f0,#fff0e6)">
+          <i class="bi bi-truck fs-1 text-warning"></i>
+          <p class="mt-2 fw-semibold text-dark">6 AM Delivery Promise</p>
+          <a href="html/delivery.html" class="btn btn-outline-warning mt-2 special-btn">
+            Explore →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Special button styling -->
+<link rel="stylesheet" href="css/style2.css">
+  <!-- CALCULATOR -->
+  <section id="calculator" class="py-5 container">
+    <div class="row g-4">
+      <div class="col-lg-6 reveal">
+        <div class="calc-card">
+          <h4>Macro & Calorie Calculator</h4>
+          <div class="row g-2 mt-2">
+            <div class="col-12">
+              <label class="form-label small">Gender</label>
+              <div class="d-flex gap-2">
+                <div class="form-check"><input class="form-check-input" type="radio" name="gender" id="male" value="male" checked><label class="form-check-label" for="male">Male</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="gender" id="female" value="female"><label class="form-check-label" for="female">Female</label></div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label small">Weight (kg)</label>
+              <input id="mWeight" type="number" class="form-control" value="70" />
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label small">Height (cm)</label>
+              <input id="mHeight" type="number" class="form-control" value="175" />
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label small">Age</label>
+              <input id="mAge" type="number" class="form-control" value="26" />
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label small">Activity</label>
+              <select id="mActivity" class="form-select">
+                <option value="1.2">Sedentary</option>
+                <option value="1.375">Light</option>
+                <option value="1.55" selected>Moderate</option>
+                <option value="1.725">Active</option>
+                <option value="1.9">Very Active</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label small">Goal</label>
+              <select id="mGoal" class="form-select">
+                <option value="-400">Fat loss (calorie deficit)</option>
+                <option value="0" selected>Maintenance</option>
+                <option value="400">Muscle gain (surplus)</option>
+              </select>
+            </div>
+            <div class="col-12 text-end mt-2">
+              <button class="btn btn-primary" onclick="calculateMacros()">Calculate</button>
+            </div>
+          </div>
+
+          <div id="macroResults" class="mt-3 d-none">
+            <hr>
+            <div><span class="result" id="resCalories"></span></div>
+            <div class="mt-2 small text-muted" id="resMacros"></div>
+            <div class="mt-3">
+              <button class="btn btn-sm btn-outline-success" onclick="suggestFoods()">Suggest Foods</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teller & Diet Plan -->
+      <div class="col-lg-6 reveal">
+        <div class="calc-card">
+          <h4 id="teller">Diet Teller — What should I eat today?</h4>
+
+          <div class="mt-2">
+            <label class="form-label small">Choose Goal (for suggestions)</label>
+            <select id="tGoal" class="form-select mb-2">
+              <option value="maintenance">Maintenance</option>
+              <option value="weightloss">Weight Loss</option>
+              <option value="muscle">Muscle Gain</option>
+            </select>
+            <button class="btn btn-success btn-sm" onclick="tellDiet()">Get Today's Meals</button>
+          </div>
+
+          <div id="tellerResult" class="mt-3 small text-muted"></div>
+
+          <hr>
+          <h5>Healthy Diet Plan (Auto-generate)</h5>
+          <div class="d-flex gap-2 mt-2">
+            <select id="planDays" class="form-select form-select-sm w-auto">
+              <option value="1">1 Day</option>
+              <option value="3">3 Days</option>
+              <option value="7" selected>7 Days</option>
+            </select>
+            <button class="btn btn-outline-primary btn-sm" onclick="generateDietPlan()">Generate Plan</button>
+          </div>
+          <div id="planResult" class="mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG SNIPPETS -->
+  <section id="blog" class="py-5 container">
+    <h3 class="mb-4">From our Nutrition Blog</h3>
+    <div class="row g-3">
+      <div class="col-md-4 reveal">
+        <div class="card"><img src="https://energiefitness.in/cdn/shop/articles/Best_Post-Workout_Meals.png?v=1746516170" class="card-img-top" alt=""><div class="card-body"><h6>5 Post-Workout Meals with Sprouts</h6><p class="small text-muted">Quick protein combos to recover faster.</p></div></div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="card"><img src=" https://www.chefkunalkapur.com/wp-content/uploads/2024/02/YT-2023-Thumbnails-2.png?v=1706977457" class="card-img-top" alt=""><div class="card-body"><h6>Why Black Chana is a Gym Staple</h6><p class="small text-muted">Affordable & nutrient dense.</p></div></div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRELPaKEMihqDm09nyS0xAU5zH-iDoVGSaRXA&s" class="card-img-top" alt=""><div class="card-body"><h6>Honey vs Sugar — The Real Truth</h6><p class="small text-muted">Natural sweeteners explained.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 container">
+    <div class="row g-4">
+      <div class="col-md-6 reveal">
+        <h4>Contact Us</h4>
+        <p class="small text-muted">Questions? Orders? Trainer advice?</p>
+        <button class="btn btn-outline-success" onclick="window.open('https://wa.me/7607637770','_blank')"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</button>
+      </div>
+      <div class="col-md-6 reveal">
+        <div class="card" style="padding:1rem; border-radius:12px; border:1px solid rgba(11,42,26,0.04);">
+          <form onsubmit="event.preventDefault(); alert('Thanks! We will contact you.');">
+            <input class="form-control mb-2" placeholder="Your name" required />
+            <input type="email" class="form-control mb-2" placeholder="Email" required />
+            <textarea class="form-control mb-2" placeholder="Message" rows="3" required></textarea>
+            <button class="btn btn-primary w-100" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">© 2025 NutriPulse • Fresh • Trainer-Approved • Daily</p>
+      <small class="text-muted">Made for gym-goers who want clean, simple nutrition.</small>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="floating-wa" href="https://wa.me/7607637770" target="_blank" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp" style="font-size:20px; color:#fff"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

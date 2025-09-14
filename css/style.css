@@ -1,0 +1,86 @@
+:root{
+    --accent-1: #06beb6;
+    --accent-2: #48b1bf;
+    --accent-3: #ffd166;
+    --muted: #6b7280;
+    --card-shadow: 0 12px 30px rgba(11,42,26,0.06);
+    --glass: rgba(255,255,255,0.6);
+  }
+  *{box-sizing:border-box}
+  body{
+    font-family:'Poppins',system-ui,Arial;
+    background: linear-gradient(180deg,#f7fff9 0%, #f1fbff 100%);
+    color:#0b2a1a;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    scroll-behavior:smooth;
+  }
+
+  /* NAV */
+  .navbar{backdrop-filter: blur(6px); background: rgba(255,255,255,0.8); box-shadow: 0 6px 18px rgba(16,24,32,0.04);}
+
+  /* HERO */
+  header.hero{
+    min-height:86vh;
+    background: linear-gradient(160deg, rgba(6,190,182,0.08), rgba(72,177,191,0.04)), url(' https://wallpapercave.com/wp/wp12424948.jpg') center/cover no-repeat;
+    display:flex; align-items:center;
+    padding:5rem 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.72));
+    border-radius:18px; padding:2.2rem; box-shadow:var(--card-shadow);
+    border:1px solid rgba(11,42,26,0.04);
+  }
+  .hero-title{font-size:clamp(1.6rem,3.6vw,2.6rem); font-weight:700; line-height:1.05;}
+  .hero-sub{color:var(--muted); margin-top:.6rem;}
+  .cta-primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#fff; border-radius:12px; padding:.6rem 1.15rem; box-shadow:0 10px 30px rgba(6,190,182,0.12); border:none;}
+  .cta-ghost{border-radius:12px; padding:.5rem .9rem; border:1px solid rgba(11,42,26,0.06); background:transparent;}
+
+  /* PRODUCTS */
+  .product-card{border-radius:16px; overflow:hidden; transition:transform .35s ease, box-shadow .35s ease;}
+  .product-card:hover{transform:translateY(-12px); box-shadow:0 22px 44px rgba(11,42,26,0.08);}
+
+  /* FEATURES ICONS */
+  .feature {
+    padding:1.6rem;
+    border-radius:14px;
+    transition:background .6s ease, color .4s ease, transform .35s ease;
+    cursor:pointer;
+    user-select:none;
+    background:linear-gradient(180deg,#fff,#fbfffd);
+  }
+  .feature .bi{font-size:28px; color:var(--accent-2); transition:transform .35s, color .35s;}
+  .feature.active{background:linear-gradient(90deg, rgba(6,190,182,0.12), rgba(255,217,102,0.06)); transform:translateY(-8px);}
+  .feature.active .bi{transform:rotate(12deg) scale(1.15); color:var(--accent-1);}
+
+  /* CALCULATOR */
+  .calc-card{border-radius:12px; padding:1rem; background:linear-gradient(180deg,rgba(255,255,255,0.9), rgba(255,255,255,0.78)); border:1px solid rgba(11,42,26,0.04); box-shadow:var(--card-shadow);}
+  .result {font-weight:600; color:#0b3b2b;}
+
+  /* DIET PLAN / TELLER */
+  .plan-day{background:linear-gradient(180deg,#ffffff,#fbfff9); border-radius:12px; padding:10px; border:1px solid rgba(11,42,26,0.04);}
+
+  /* BOX BUILDER */
+  .box-card{border-radius:12px; padding:1rem; border:1px solid rgba(11,42,26,0.04); background:#fff;}
+
+  /* Buttons ripple effect */
+  .btn { position: relative; overflow: hidden; }
+  .btn:after { content:""; position:absolute; width:10px; height:10px; background:rgba(255,255,255,0.3); border-radius:50%; transform:scale(1); opacity:0; pointer-events:none; transition:transform .6s ease, opacity .8s; }
+  .btn:active:after { transform:scale(25); opacity:0.6; transition:0s; left:50%; top:50%; }
+
+  /* Progress */
+  .cal-progress{height:14px; border-radius:999px; overflow:hidden; background:#f1f5f9; border:1px solid rgba(11,42,26,0.02); }
+  .cal-progress > .bar{height:100%; width:0%; background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); transition:width .6s ease; }
+
+  /* on-scroll reveal */
+  .reveal{opacity:0; transform:translateY(24px); transition:all .7s cubic-bezier(.2,.9,.3,1); will-change:opacity, transform;}
+  .reveal.inview{opacity:1; transform:none;}
+  
+  /* Footer */
+  footer{padding:2rem 0; color:var(--muted);}
+  .floating-wa{position:fixed; right:1.25rem; bottom:1.25rem; z-index:9999; border-radius:999px; padding:.6rem; box-shadow:0 18px 40px rgba(6,190,182,0.12); background:linear-gradient(180deg,#2cc77a,#17985a); color:#fff;}
+
+  /* Responsive tweaks */
+  @media (max-width: 900px){ .hero{padding:3rem 1rem;} .hero-card {margin-bottom:1rem} }
